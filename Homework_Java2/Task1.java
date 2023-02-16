@@ -34,7 +34,7 @@ public class Task1{
         //Убираем ненужные символы и записываем данные в словарь
         String[] keys = sb.toString().replace("{", "").replace("\"", "").
                 replace("}", "").replaceAll("\\s", "").split(",");
-        for (String data : keys) { //Из списка-коллекции keys на каждом шаге-итерации берется очередной элемент этого списка и присваивается переменной data типа String (эта переменная живет только внутри цикла)
+        for (String data : keys) { 
             String[] keyValue = data.split(":");
             String key = keyValue[0];
             String value = keyValue[1];
