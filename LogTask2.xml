@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-02-16T15:56:49.599420500Z</date>
+  <millis>1676563009599</millis>
+  <nanos>420500</nanos>
+  <sequence>0</sequence>
+  <logger>Homework_Java2.Task2</logger>
+  <level>WARNING</level>
+  <class>Homework_Java2.Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Test</message>
+</record>
+<record>
+  <date>2023-02-16T15:56:49.629421300Z</date>
+  <millis>1676563009629</millis>
+  <nanos>421300</nanos>
+  <sequence>1</sequence>
+  <logger>Homework_Java2.Task2</logger>
+  <level>INFO</level>
+  <class>Homework_Java2.Task2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Sort Array</message>
+</record>
+</log>
