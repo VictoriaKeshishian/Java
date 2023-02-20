@@ -446,4 +446,311 @@ public class Program {
   */
 
 
+// OBJECT
 
+/**
+ 
+public class Ex01_object {
+ public static void main(String[] args) {
+ Object o = 1; GetType(o); // java.lang.Integer
+ o = 1.2; GetType(o); // java.lang.Double
+ }
+ static void GetType(Object obj) {
+ System.out.println(obj.getClass().getName());
+ }
+}
+
+
+public class Ex01_object {
+ public static void main(String[] args) {
+ System.out.println(Sum(1, 2));
+ System.out.println(Sum(1.0, 2));
+ System.out.println(Sum(1, 2.0));
+ System.out.println(Sum(1.2, 2.1));
+ }
+ static int Sum(int a, int b) { ...
+ }
+ static double Sum(double a, double b) { ...
+ }
+}
+
+
+public class Ex01_object {
+ public static void main(String[] args) {
+    System.out.println(Sum(1, 2));
+    System.out.println(Sum(1.0, 2));
+    System.out.println(Sum(1, 2.0));
+    System.out.println(Sum(1.2, 2.1));
+ }
+ static int Sum(int a, int b) { ...
+ }
+ static double Sum(double a, double b) { ...
+ }
+ static String Sum(String a, String b) { ...
+ }
+}
+ public class Ex01_object {
+ public static void main(String[] args) {
+ System.out.println(Sum(1, 2));
+ System.out.println(Sum(1.0, 2));
+ System.out.println(Sum(1, 2.0));
+ System.out.println(Sum(1.2, 2.1));
+ }
+ static Object Sum(Object a, Object b) {
+ if (a instanceof Double && b instanceof Double) {
+ return (Object)((Double) a + (Double) b);
+ } else if(a instanceof Integer && b instanceof Integer) {
+ return (Object)((Integer) a + (Integer) b);
+ } else return 0;
+ }
+}
+ */
+
+
+ //МАССИВЫ
+
+// увеличить размер массива
+// Есть массив из 2 элементов, необходимо добавить 3-ий
+
+/* 
+public class Ex01_object {
+ public static void main(String[] args) {
+ int[] a = new int[] { 1, 9 };
+ int[] b = new int[3];
+ System.arraycopy(a, 0, b, 0, a.length);
+ for (int i : a) { System.out.printf("%d ", i);} // 1 9
+ for (int j : b) { System.out.printf("%d ", j);}
+ // 0 9 0 0 0 0 0 0 0 0
+ } }
+*/
+// метод для добавления элемента в массив
+// public class Ex01_object {
+//     static int[] AddItem(int[] array, int item) {
+//     int length = array.length;
+//     int[] temp = new int[length + 1];
+//     System.arraycopy(array, 0, temp, 0, length);
+//     temp[length] = item;
+//     return temp;
+//     }
+//     public static void main(String[] args) {
+//     int[] a = new int[] { 0, 9 };
+//     for (int i : a) { System.out.printf("%d ", i); }
+//     a = AddItem(a, 2);
+//     a = AddItem(a, 3);
+//     for (int j : a) { System.out.printf("%d ", j); }
+//     }
+//    }
+
+//КОЛЛЕКЦИИ
+
+//ArrayList
+
+// import java.util.ArrayList;
+
+// public class programm {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> List = new ArrayList<Integer>();
+//         List.add(2809);
+
+//         for(Object o : List) {
+//             System.out.println(o);
+//         }
+//     }
+// }
+   
+// Разные способы создания
+// ArrayList<Integer> list1 = new ArrayList<Integer>();
+// ArrayList<Integer> list2 = new ArrayList<>();
+// ArrayList<Integer> list3 = new ArrayList<>(10);
+// ArrayList<Integer> list4 = new ArrayList<>(list3);
+
+//КОЛЛЕКЦИИ ФУНКЦИОНАЛ
+
+// add(args) – добавляет элемент в список ( в т.ч. на нужную позицию)
+// get(pos) – возвращает элемент из списка по указанной позиции
+// indexOf(item) – первое вхождение или -1
+// lastIndexOf(item) – последнее вхождение или -1
+// remove(pos) – удаление элемента на указанной позиции и его возвращение
+// set(int pos, T item) – gjvtoftn значение item элементу, который находится
+// на позиции pos
+// void sort(Comparator) – сортирует набор данных по правилу
+// subList(int start, int end) – получение набора данных от позиции start до end
+
+// clear() – очистка списка
+// toString() – «конвертация» списка в строку
+// Arrays.asList – преобразует массив в список
+// containsAll(col) – проверяет включение всех элементов из col
+// removeAll(col) – удаляет элементы, имеющиеся в col
+// retainAll(col) – оставляет элементы, имеющиеся в col
+// toArray() – конвертация списка в массив Object’ов
+// toArray(type array) – конвертация списка в массив type
+// List.copyOf(col) – возвращает копию списка на основе имеющегося
+// List.of(item1, item2,...) – возвращает неизменяемый список
+
+
+// import java.util.List;
+// public class Ex006_ListOf {
+//  public static void main(String[] args) {
+//  Character value = null;
+//  List<Character> list1 =
+//  List.of('S', 'e', 'r', 'g', 'e', 'y');
+//  System.out.println(list1);
+//  // list1.remove(1); // java.lang.UnsupportedOperationException
+//  List<Character> list2 = List.copyOf(list1);
+//  }
+// }
+
+//ИТЕРАТОР
+
+// import java.util.*;
+// public class Ex007_Iterator {
+//  public static void main(String[] args) {
+//  List<Integer> list = List.of(1, 12, 123, 1234, 12345);
+//  for (int item : list) { System.out.println(item); }
+//  Iterator<Integer> col = list.iterator();
+//  while (col.hasNext()) {
+//  System.out.println(col.next());
+
+//  }
+//  }
+// }
+
+
+// import java.util.*;
+// public class Ex007_Iterator {
+//  public static void main(String[] args) {
+//  List<Integer> list = List.of(1, 12, 123, 1234, 12345);
+//  for (int item : list) { System.out.println(item); }
+//  Iterator<Integer> col = list.iterator();
+//  while (col.hasNext()) {
+//  //System.out.println(col.next());
+//  col.next();
+//  col.remove();
+//  }
+//  }
+// }
+
+
+
+// public class Homework3_JSONtoText {
+//     public static void main(String[] args) {
+//         String input = "[{\"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"}, {\"фамилия\":\"Петрова\",\"оценка\":\"4\",\"предмет\":\"Информатика\"}, {\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]";
+//         input = clip (input);  // убрать []
+//         String[] students = input.split (", ");
+        
+//         for (String student : students) {
+//             student = clip (student);
+//             String[] keyValues = student.split (",");
+//             String name = "", grade = "", subject = "";
+//             for (String keyValue : keyValues) {
+//                 String[] keyValueParts = keyValue.split (":");
+//                 String key = clip (keyValueParts[0]);
+//                 String value = clip (keyValueParts[1]);
+
+//                 if (key.equals ("фамилия"))
+//                     name = value;
+//                 else if (key.equals ("оценка"))
+//                     grade = value;
+//                 else if (key.equals ("предмет"))
+//                     subject = value;
+//                 else
+//                     throw new IllegalStateException("Не понял, что за поле");
+//             }
+//             System.out.printf("Студент %s получил %s по предмету %s.\n", name, grade, subject);
+//         }
+//     }
+
+//     private static String clip (String str) {
+//         return str.substring(1, str.length() - 1);
+//     }
+// }
+
+
+
+// import java.util.Arrays;
+// import java.util.logging.*;
+
+// // Реализуйте алгоритм сортировки пузырьком числового массива,
+// // результат после каждой итерации запишите в лог-файл.
+// public class Homework2_BubbleSortLogging {
+// private static Logger logger = Logger.getLogger(Homework2_BubbleSortLogging.class.getName());
+
+// public static void main(String[] args) {
+// int[] array = { 1, 6, 2, 3, 9, 0, 4 };
+// System.out.println(Arrays.toString(array));
+// bubbleSort (array);
+// System.out.println(Arrays.toString(array));
+// }
+
+// private static void bubbleSort (int[] array) {
+// for (int ceiling = array.length; ceiling >= 0; ceiling--) {
+// for (int i = 0; i < ceiling && i + 1 < ceiling; i++)
+// if (array[i] > array[i + 1]) {
+// int temp = array[i];
+// array[i] = array[i + 1];
+// array[i + 1] = temp;
+// logger.log (Level.INFO, String.format ("%d <-> %d, %s",
+// array[i], array[i +
+
+
+
+
+
+
+
+/*/Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.*/
+
+
+// package Homework_Java2;
+
+// import java.io.IOException;
+// import java.util.Arrays;
+// import java.util.logging.*;
+
+// public class Task2 {
+//     static Logger logger = Logger.getLogger(Task2.class.getName());
+    
+//     public static void main(String[] args) throws IOException {
+//         //Logger logger = Logger.getLogger(Task2.class.getName());
+//         // logger.setLevel(Level.INFO);
+//         // FileHandler ch = new FileHandler("LogTask2.xml");
+//         // logger.addHandler(ch);
+//         // XMLFormatter xml = new XMLFormatter();
+//         // ch.setFormatter(xml);
+//         // logger.log(Level.WARNING, "Test");
+//         // logger.info("Sort Array");
+//         int [] arr = new int[] {2,6,7,4,5,1,3,9,8};
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.println(arr[i]);
+//         }
+//         int[] newArr = bubleSort(arr);
+//         System.out.printf("\n Отсортированный массив: \n");
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.println(newArr[i]);
+//         }
+
+//     }
+//     public static int[] bubleSort (int[]arr) throws SecurityException, IOException{
+//         logger.setLevel(Level.INFO);
+//         FileHandler ch = new FileHandler("LogTask2.xml");
+//         //logger.addHandler(ch);
+//         //XMLFormatter xml = new XMLFormatter();
+//         //ch.setFormatter(xml);
+//         //logger.log(Level.WARNING, "Test");
+//         //logger.info("Sort Array");
+//         for (int j = 0; j < arr.length - 1; j++) {
+//             for (int i = 0; i < arr.length - j -1; i++) {
+//                 if(arr[i] > arr[i+1]){
+//                     int buf = arr[i];
+//                     arr[i] = arr[i+1];
+//                     arr[i+1] = buf;
+//                     logger.log (Level.INFO, String.format("%d <-> %d, %s", arr[i],arr[i+1],Arrays.toString(arr)));
+//                     logger.addHandler(ch);
+//                 }    
+//             }
+//         }
+//         return arr;
+
+//     }
+        
+//     }
